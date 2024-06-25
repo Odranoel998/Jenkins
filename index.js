@@ -1,4 +1,5 @@
-const http = require('http');
+import http from 'http'
+import {sum} from './src/sum.js'
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -11,4 +12,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(sum(3,2))
 });
